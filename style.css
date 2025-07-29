@@ -143,6 +143,7 @@ h1:hover
     font-size: 30px;
     padding: 12% 8%;
     gap: 10em;
+    bac
 }
 
 .about-img img
@@ -186,4 +187,18 @@ h1:hover
     font-size: 18px;
     padding: 5% 5%;
     gap: 10em;
+}
+
+@media (max-width: 768px) 
+{
+  .hero-section 
+    {
+        flex-direction: column; /* Stack vertically on small screens */
+        text-align: center;
+    }
+
+  .hero-text, .hero-image 
+    {
+        flex: 1 1 100%;
+    }
 }
