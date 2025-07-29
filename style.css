@@ -11,11 +11,16 @@
 nav
 {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px 5%;
+/*     
     align-items: center;
     justify-content: space-between;
     padding-top: 40px;
     padding-left: 10%;
-    padding-right: 10%;
+    padding-right: 10%; */
 }
 
 .hero
@@ -56,8 +61,8 @@ nav span:hover
 nav ul li
 {
     list-style-type: none;
-    display: inline-block;
-    padding: 10px 20px;
+    display: block;
+    padding: 10px 0;
 }
 
 nav ul li a
@@ -94,7 +99,7 @@ nav ul li a:hover
 
 .home-content h1
 {
-    font-size: 62px;
+    font-size: 42px;
     line-height: 1.2;
     color: black;
 }
@@ -116,7 +121,9 @@ h1:hover
 .img-box img
 {
     border-radius: 50%;
+    max-width: 100%;
     width: 420px;
+    height: auto;
 }
 
 ::-webkit-scrollbar
@@ -149,10 +156,11 @@ h1:hover
 .about-img img
 {
     position: relative;
-    width: 420px;
+    width: 280px;
     box-shadow: 0 0 25px orangered,
                 0 0 50px orangered;
     border-radius: 50%;
+    
 }
 
 .about-content h2
@@ -166,14 +174,14 @@ h1:hover
 .about-content p
 {
     text-align: left;
-    font-size: 62px;
+    font-size: 42px;
     color: white;
 }
 
 .about-content p2
 {
     text-align: left;
-    font-size: 20px;
+    font-size: 16px;
     margin:  2em 0 3em;
     color: white;
 }
@@ -189,16 +197,31 @@ h1:hover
     gap: 10em;
 }
 
-@media (max-width: 768px) 
+@media (max-width: 600px) 
 {
-  .hero-section 
+  .home-content h1,
+  .about-content p 
     {
-        flex-direction: column; /* Stack vertically on small screens */
-        text-align: center;
+        font-size: 32px;
+    }
+ .home-content h3 
+    {
+        font-size: 24px;
     }
 
-  .hero-text, .hero-image 
+  .img-box img,
+  .about-img img 
     {
-        flex: 1 1 100%;
+        width: 220px;
     }
 }
+    
+@media (max-width: 1024px) {
+  .home,
+  .about,
+  .contact {
+    flex-direction: column;
+    gap: 3em;
+    padding: 50px 5%;
+    text-align: center;
+  }
